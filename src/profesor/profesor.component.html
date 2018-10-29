@@ -1,0 +1,27 @@
+<h1>Componente Profesor</h1>
+<p>Nombre: {{nombre}}</p>
+<p>Edad: {{edad}}</p>
+<p *ngIf="casado; else soltero">Estado civil: casado</p>
+<ng-template #soltero>
+<p>Estado civil: soltero</p>
+</ng-template>
+<p>Trabajos:</p>
+<ul> <li *ngFor="let i of trabajos">
+   {{i}}
+   </li>
+</ul>
+<ul>
+    <li *ngFor="let i of profesorado; let x = index">
+        <strong>Profesor {{x+1}}</strong>
+        <ul>
+            <li>{{i.nombre}}</li>
+            <li>{{i.edad}}</li>
+            <li>{{i.materia}}</li>
+            <li *ngIf="i.contratado">Contratado</li>
+            <li *ngIf="!i.contratado">No Contratado</li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    
+</ul>
