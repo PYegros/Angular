@@ -14,6 +14,8 @@ export class ProfesorComponent{
     //El Any hace referencia a que acepta cualquier TIPO de dato
     public profesor: Profesor;
     public profesorado: Array<Profesor>;
+    public color: string;
+    public admin:boolean;
 
     constructor(){
         this.nombre='Xabi';
@@ -25,6 +27,17 @@ export class ProfesorComponent{
             new Profesor('Vanesa',34,'Matematicas',true),
             new Profesor('Ramiro',28,'Lenguaje',false),
         ]
+        this.color='blue';
+        this.admin = false;
     }
     
+    ngOnInit(): void {
+        console.log(this.profesor);
+    }
+
+    pulsarBoton()
+    {
+        console.log("Hemos pulsado el botón");
+        this.admin = !this.admin;
+    }
 }

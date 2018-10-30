@@ -1,5 +1,13 @@
+<!--<app-fruta></app-fruta>
 <app-profesor></app-profesor>
 
-<h1>
-  Prueba
-</h1>
+<h1></h1> -->
+<hr>
+<nav>
+    <a [routerLink]="['/fruta']" [routerLinkActive]="['activado']">Fruta</a>
+    -
+    <a [routerLink]="['/profesor']" [routerLinkActive]="['activado']">Profesor</a>
+</nav>
+<hr>
+
+<router-outlet></router-outlet>
